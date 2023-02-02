@@ -6,7 +6,9 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-    "lint": "jslint server.js app/* node  --trace-warnings"
+    "lint": "eslint .  --ext .js",
+    "lint:fix": "eslint --fix .  --ext .js",
+    "build": "npx build-node-app online-market"
   },
   "keywords": [
     "nodejs",
@@ -18,14 +20,15 @@
   "author": "bezkoder",
   "license": "ISC",
   "dependencies": {
+    "build-node-app": "^1.6.7",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "jslint": "^0.12.1",
     "mongoose": "^6.8.1",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
+    "eslint": "^8.33.0",
     "nodemon": "^2.0.20"
   }
 }

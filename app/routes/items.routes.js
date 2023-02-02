@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 module.exports = app => {
     const items = require("../controllers/item.controller.js");
   
