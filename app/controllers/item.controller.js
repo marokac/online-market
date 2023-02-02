@@ -73,7 +73,7 @@ exports.findOne = (req, res) => {
     });
 };
 
-// Update a Item by the id in the request
+// Update a Item by the id in the request yes
 exports.update = (req, res) => {
   if (!req.body) {
     return res.status(400).send({
