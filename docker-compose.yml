@@ -1,6 +1,6 @@
 version: "3"
 services:
-        login-app:
+        online-market:
             container_name: online-market
             image: latest123/online-market
             restart: always
