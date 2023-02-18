@@ -1,18 +1,19 @@
 version: "3"
 services:
-        online-market:
-            container_name: online-market
-            image: latest123/online-market
-            restart: always
-            build: .
-            ports:
-              - "7500:7500"
-            links:
-              - mongo
-        mongo:
-              container_name: mongo
-              image: mongo
-              volumes:
-                - ./data:/data/db
-              ports:
-                - '27018:27017'
+  online-market:
+    container_name: online-market
+    image: "node:8"
+    user: "node"
+    restart: always
+    build: .
+    ports:
+      - "80:3000" 
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
